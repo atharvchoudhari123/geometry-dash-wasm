@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/proxy.py": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "excludeFiles": "{payload/**,fonts/**,ref/**,*.gz,*.wasm,*.data}"
     }
   },
   "rewrites": [
