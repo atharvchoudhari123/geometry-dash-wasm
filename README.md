@@ -11,4 +11,6 @@ To make the game work with online features you NEED to run python server.py OTHE
 
 PLEASE RUN IT WITH SERVER.PY IF YOU WANT TO PLAY GD WITH ONLINE FEATURES!!!!
 
+## Deployment
 
+For Replit, Heroku, and Vercel setup instructions, see [DEPLOY.md](DEPLOY.md). The deployment configuration is on the `deploy-ready` branch; the `main` branch used by the existing GitHub Pages site is unchanged.
