@@ -1,0 +1,9 @@
+entrypoint = "index.html"
+
+[deployment]
+run = ["python3", "server.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
