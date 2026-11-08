@@ -47,6 +47,8 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_error(501, "Unsupported method ('POST')")
 
 if __name__ == '__main__':
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
-    print('Serving on http://localhost:%d/index.html' % port)
-    ThreadingHTTPServer(('', port), Handler).serve_forever()
+    port_arg = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('PORT', '8000')
+    port = int(port_arg)
+    host = os.environ.get('HOST', '0.0.0.0')
+    print('Serving on http://%s:%d/index.html' % (host, port), flush=True)
+    ThreadingHTTPServer((host, port), Handler).serve_forever()
